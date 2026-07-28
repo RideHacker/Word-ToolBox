@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word & Text Shuffler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Word & Text Shuffler</h2>
+    <textarea id="shuffleInput" placeholder="Enter text to randomize/shuffle..."></textarea>
+    <div class="btn-group">
+      <button onclick="runShuffle('words')">Shuffle Words</button>
+      <button onclick="runShuffle('lines')">Shuffle Lines</button>
+      <button onclick="runShuffle('letters')">Shuffle Letters</button>
+      <button class="btn-sec" onclick="copyText('shuffleInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('shuffleInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

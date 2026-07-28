@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Text Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Reverse Text</h2>
+    <textarea id="reverseInput" placeholder="Enter text to reverse..."></textarea>
+    <div class="btn-group">
+      <button onclick="runReverse('chars')">Reverse Characters</button>
+      <button onclick="runReverse('words')">Reverse Words</button>
+      <button onclick="runReverse('lines')">Reverse Lines</button>
+      <button class="btn-sec" onclick="copyText('reverseInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('reverseInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* ==========================================================================
+   WORD TOOLBOX — DARK NAVY EDITION MASTER STYLESHEET
+   Theme: Editorial Cream (#F7F5ED), Pure White (#FFFFFF), 
+          Dark Navy Blue (#0B192C / #1E2E45), Charcoal (#1C2836)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+
+/* --- 1. DESIGN VARIABLES --- */
+:root {
+  --bg-cream: #F7F5ED;
+  --card-white: #FFFFFF;
+  --text-charcoal: #1C2836;
+  --text-muted: #5C6773;
+  --navy-primary: #0B192C;       /* Dark Navy Blue */
+  --navy-hover: #1E2E45;         /* Lighter Navy Hover */
+  --navy-active: #050C17;        /* Deep Active State */
+  --border-subtle: #E3DEC3;      /* Clean subtle border */
+  --border-strong: #DCD7CD;
+  --danger-red: #D90429;
+  
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 6px;
+  --shadow-card: 0 2px 8px rgba(11, 25, 44, 0.04);
+  --shadow-hover: 0 6px 18px rgba(11, 25, 44, 0.12);
+}
+
+/* --- 2. BASE RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-charcoal);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  padding: 30px 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- 3. HEADER & NAV --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Header Brand Title Hover Animation */
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.brand-title:hover {
+  color: var(--navy-hover);
+  transform: translateY(-1px);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-family: var(--font-sans);
+  color: var(--text-charcoal);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover { 
+  color: var(--navy-primary);
+}
+
+/* --- 4. HERO SECTION & INTERACTIVE TITLE --- */
+.hero-header {
+  text-align: center;
+  margin: 35px 0 28px;
+}
+
+/* Main Heading Hover Animation */
+.main-title, h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--navy-primary);
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+}
+
+.main-title:hover, h1:hover {
+  color: #1E2E45;
+  transform: scale(1.02) translateY(-2px);
+  text-shadow: 0 4px 15px rgba(11, 25, 44, 0.1);
+}
+
+.main-subtitle {
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+/* --- 5. STATS COUNTER BAR --- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--navy-primary);
+}
+
+.stat-card .num {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--navy-primary);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-card .label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* --- 6. FORM INPUTS & TEXTAREAS --- */
+input, textarea, select {
+  font-family: var(--font-sans);
+}
+
+textarea, 
+.studio-textarea {
+  width: 100%;
+  height: 220px;
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 18px;
+  font-size: 0.95rem;
+  color: var(--text-charcoal);
+  outline: none;
+  margin-bottom: 20px;
+  resize: vertical;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select,
+.studio-input {
+  width: 100%;
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--text-charcoal);
+  outline: none;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focused State */
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: var(--navy-primary) !important;
+  box-shadow: 0 0 0 3px rgba(11, 25, 44, 0.1) !important;
+}
+
+::placeholder {
+  color: #8C96A0;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+}
+
+/* --- 7. BUTTON SYSTEM (DARK NAVY ACCENTS) --- */
+.btn-group, .action-rows, .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Default Outline Buttons (Uppercase, Lowercase, etc.) */
+button, .btn, .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+  background: var(--card-white);
+  color: var(--text-charcoal);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-height: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Outline Button Hover -> Dark Navy Fill */
+button:hover, .btn:hover, .btn-outline:hover {
+  background-color: var(--navy-primary);
+  border-color: var(--navy-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+/* Solid Dark Navy Primary Buttons (Copy Text / Clear All) */
+.btn-dark, .btn-primary, .btn-copy {
+  background-color: var(--navy-primary) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--navy-primary) !important;
+  font-weight: 600;
+}
+
+.btn-dark:hover, .btn-primary:hover, .btn-copy:hover {
+  background-color: var(--navy-hover) !important;
+  border-color: var(--navy-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 25, 44, 0.25);
+}
+
+/* Red / Danger Button Option */
+.btn-danger {
+  background-color: transparent !important;
+  color: var(--danger-red) !important;
+  border: 1px solid var(--border-strong) !important;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-red) !important;
+  color: #FFFFFF !important;
+  border-color: var(--danger-red) !important;
+  transform: translateY(-2px);
+}
+
+/* --- 8. LOWER TOOLS GRID --- */
+.tools-grid-section {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 36px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.section-headline, .directory-category {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tool-card, .editorial-card {
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 24px;
+  height: 100%;
+  text-decoration: none;
+  display: block;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tool-card:hover, .editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--navy-primary);
+}
+
+.tool-card h3, .card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--navy-primary);
+}
+
+.tool-card p, .card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --- 9. FOOTER --- */
+footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--text-charcoal);
+  text-decoration: none;
+  margin-left: 16px;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--navy-primary);
+  text-decoration: underline;
+}
+
+/* --- 10. RESPONSIVE --- */
+@media (max-width: 900px) {
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  body { padding: 20px 16px; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .btn-group, .action-rows { flex-direction: column; }
+  .btn-group .btn { width: 100%; }
+}

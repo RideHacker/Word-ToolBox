@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary / Hex / ASCII Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Binary / Hex / ASCII Converter</h2>
+    <textarea id="binInput" placeholder="Enter text or binary/hex data here..."></textarea>
+    <div class="btn-group">
+      <button onclick="runBinary('toBin')">Text to Binary</button>
+      <button onclick="runBinary('fromBin')">Binary to Text</button>
+      <button onclick="runBinary('toHex')">Text to Hex</button>
+      <button onclick="runBinary('toAscii')">Text to ASCII Codes</button>
+      <button class="btn-sec" onclick="copyText('binInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('binInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

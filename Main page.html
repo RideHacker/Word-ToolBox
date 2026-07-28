@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word ToolBox — Free Online Text Converter, Formatter & Counter</title>
+  <meta name="description" content="Free online text converter, formatter, and counter.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Single Link to Master CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<div class="container">
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-left">
+      <h2><span class="brand-title">Word ToolBox</span></h2>
+      <nav>
+        
+        <a href="about.html">About Us</a>
+        <a href="terms.html">Terms & Policy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       UPPER SEGMENT: Main Tool Workspace
+       ========================================== -->
+  <section class="main-workspace-section">
+    <div class="hero-header">
+      <h1 class="main-title">Word ToolBox</h1>
+      <p class="main-subtitle">Free Online Text Converter, Formatter & Counter</p>
+    </div>
+
+    <!-- Live Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="num" id="statWords">0</div>
+        <div class="label">Words</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="statChars">0</div>
+        <div class="label">Characters</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="statSentences">0</div>
+        <div class="label">Sentences</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="statRead">0m</div>
+        <div class="label">Read Time</div>
+      </div>
+    </div>
+
+    <!-- Main Text Input -->
+    <textarea id="mainText" class="studio-textarea" placeholder="Type or paste your text here..."></textarea>
+
+    <!-- Quick Action Controls -->
+    <div class="action-rows">
+      <!-- Row 1: Casing -->
+      <div class="btn-group">
+        <button class="btn btn-outline" onclick="transformText('upper')">UPPERCASE</button>
+        <button class="btn btn-outline" onclick="transformText('lower')">lowercase</button>
+        <button class="btn btn-outline" onclick="transformText('title')">Title Case</button>
+        <button class="btn btn-outline" onclick="transformText('sentence')">Sentence case</button>
+        <!-- Row 2: Text Cleaning -->  
+        <button class="btn btn-outline" onclick="transformText('spaces')">Clean Extra Spaces</button>
+        <button class="btn btn-outline" onclick="transformText('breaks')">Remove Line Breaks</button>
+        <button class="btn btn-outline" onclick="transformText('html')">Strip HTML</button>
+        <button class="btn btn-outline" onclick="transformText('sort')">Sort Lines (A-Z)</button>
+        <button class="btn btn-outline" onclick="transformText('trim')">Trim & Remove Blank Lines</button>
+        <button class="btn btn-outline" onclick="transformText('bullets')">Add Bullets (•)</button>
+        <button class="btn btn-outline" onclick="transformText('base64')">Base64 Encode / Decode</button>
+        <button class="btn btn-outline" onclick="transformText('duplicates')">Remove Duplicate Lines</button>
+        <button class="btn btn-outline" onclick="transformText('reverse')">Reverse Text</button>
+      </div>
+
+      <!-- Row 3: Action Triggers -->
+      <div class="btn-group">
+        <button class="btn btn-copy" onclick="copyMainText()">Copy Text</button>
+        <button class="btn btn-dark" onclick="clearMainText()">Clear All</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       LOWER SEGMENT: Popular Tools Grid Layout
+       ========================================== -->
+  <section class="tools-grid-section">
+    <h2 class="section-headline">Popular Tools</h2>
+
+  
+  <!-- Main Tools Directory -->
+  <main class="tools-directory-section">
+    <div class="hero-header">
+      <h1 class="main-title">All Text Services & Tools</h1>
+      <p class="main-subtitle">Select a tool below to open its dedicated workspace. Fast, private, and 100% browser-based.</p>
+    </div>
+
+    <!-- Category 1: Editing & Manipulation -->
+    <div class="directory-category">
+      <h2 class="category-title">Core Text Editing</h2>
+      <div class="tools-grid">
+        <a href="find-and-replace.html" class="tool-card">
+          <h3>Find and Replace</h3>
+          <p>Search for specific words or phrases inside a text block and replace them globally or individually.</p>
+        </a>
+        <a href="reverse-text.html" class="tool-card">
+          <h3>Reverse Text Tool</h3>
+          <p>Flip text backwards by reversing character order, word order, or entire lines.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 2: Generator & Sorting Tools -->
+    <div class="directory-category">
+      <h2 class="category-title">Generator & Sorting Tools</h2>
+      <div class="tools-grid">
+        <a href="text-sorter.html" class="tool-card">
+          <h3>Text Sorter</h3>
+          <p>Alphabetise lists of words or sort lines by length, character count, or reverse order.</p>
+        </a>
+        <a href="lorem-generator.html" class="tool-card">
+          <h3>Lorem Ipsum Generator</h3>
+          <p>Create custom dummy placeholder text by choosing paragraphs, sentences, or word counts.</p>
+        </a>
+        <a href="word-shuffler.html" class="tool-card">
+          <h3>Word Randomiser & Shuffler</h3>
+          <p>Scramble letters of words or randomise the line order of any list completely.</p>
+        </a>
+        <a href="list-converter.html" class="tool-card">
+          <h3>List to Comma-Separated Converter</h3>
+          <p>Turn vertical columns into single lines separated by commas, semicolons, hyphens, or slugs.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 3: Analysis & Technical Utilities -->
+    <div class="directory-category">
+      <h2 class="category-title">Analysis & Web Utilities</h2>
+      <div class="tools-grid">
+        <a href="word-frequency.html" class="tool-card">
+          <h3>Word Frequency Counter</h3>
+          <p>Analyse text blocks to show a ranked frequency table of occurring words.</p>
+        </a>
+        <a href="base64-url-converter.html" class="tool-card">
+          <h3>Base64 / URL Encoder & Decoder</h3>
+          <p>Convert plain text strings into secure Base64 format or URL-friendly web strings.</p>
+        </a>
+        <a href="binary-hex-converter.html" class="tool-card">
+          <h3>Binary / Hex / ASCII Converter</h3>
+          <p>Translate plain words into computer formats like binary code, hexadecimal, or ASCII values.</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  
+  
+      </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <p>© 2026 WORD TOOLBOX. All rights reserved.</p>
+    <div>
+      <a href="terms.html">Terms & Policy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

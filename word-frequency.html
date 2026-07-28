@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Frequency Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Word Frequency Counter</h2>
+    <textarea id="freqInput" placeholder="Paste article or essay text here..."></textarea>
+    <div class="btn-group">
+      <button onclick="runFrequency()">Analyze Frequency</button>
+      <button class="btn-sec" onclick="copyText('freqResult')">Copy Table</button>
+      <button class="btn-danger" onclick="clearText('freqInput'); clearText('freqResult');">Clear All</button>
+    </div>
+    <div id="freqResult"></div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

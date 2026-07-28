@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 & URL Encoder/Decoder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Base64 & URL Encoder/Decoder</h2>
+    <textarea id="coderInput" placeholder="Enter text or string to encode/decode..."></textarea>
+    <div class="btn-group">
+      <button onclick="runCoder('b64Enc')">Base64 Encode</button>
+      <button onclick="runCoder('b64Dec')">Base64 Decode</button>
+      <button onclick="runCoder('urlEnc')">URL Encode</button>
+      <button onclick="runCoder('urlDec')">URL Decode</button>
+      <button class="btn-sec" onclick="copyText('coderInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('coderInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

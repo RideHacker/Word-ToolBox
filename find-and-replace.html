@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find and Replace Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Find and Replace Text</h2>
+    <textarea id="frInput" placeholder="Paste your text here..."></textarea>
+    <div class="inputs-group">
+      <input type="text" id="frFind" placeholder="Find word/phrase...">
+      <input type="text" id="frReplace" placeholder="Replace with...">
+    </div>
+    <div class="btn-group">
+      <button onclick="runFindReplace()">Replace All</button>
+      <button class="btn-sec" onclick="copyText('frInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('frInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>

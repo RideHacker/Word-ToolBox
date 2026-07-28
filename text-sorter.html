@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Sorter Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Text & Line Sorter</h2>
+    <textarea id="sortInput" placeholder="Enter lines of text to sort..."></textarea>
+    <div class="btn-group">
+      <button onclick="runSort('az')">Sort A-Z</button>
+      <button onclick="runSort('za')">Sort Z-A</button>
+      <button onclick="runSort('length-asc')">Sort by Length</button>
+      <button onclick="runSort('reverse')">Reverse Lines</button>
+      <button class="btn-sec" onclick="copyText('sortInput')">Copy</button>
+      <button class="btn-danger" onclick="clearText('sortInput')">Clear</button>
+    </div>
+  </div>
+  <script src="tools.js"></script>
+</body>
+</html>
